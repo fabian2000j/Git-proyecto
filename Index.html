@@ -1,0 +1,138 @@
+<!-- Define el tipo de documento como HTML5 -->
+<!DOCTYPE html>
+<!-- Inicia el elemento HTML y establece el idioma como español -->
+<html lang="es">
+<!-- Inicia la sección de encabezado del documento -->
+<head>
+    <!-- Establece la codificación de caracteres como UTF-8 -->
+    <meta charset="utf-8">
+    <!-- Configura la vista para dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparecerá en la pestaña del navegador -->
+    <title>Donde la Eye</title>
+    <!-- Enlaza el archivo CSS para estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Inicia el cuerpo del documento -->
+<body>
+    <!-- Sección de encabezado que contiene el título principal -->
+    <header>
+        <!-- Título principal de la página -->
+        <h1>Menú donde la Eye</h1>
+    </header>
+    <!-- Inicia la sección principal del contenido -->
+    <main>
+        <!-- Sección de inicio que es visible por defecto -->
+        <section id="inicio" class="contenedor visible">
+            <!-- Botón para mostrar la sesión 1 -->
+            <button onclick="mostrarSeccion('sesion1')">Bebidas</button>
+            <!-- Botón para mostrar la sesión 2 -->
+            <button onclick="mostrarSeccion('sesion2')">Sándwich & Hamburguesa</button>
+            <!-- Botón para mostrar la sesión 3 -->
+            <button onclick="mostrarSeccion('sesion3')">Horarios de Servicios</button>
+            <!-- Botón para mostrar la sesión 4 -->
+            <button onclick="mostrarSeccion('sesion4')">Incluir Reseña</button>
+        </section>
+        <!-- Sección para la sesión 1 -->
+        <section id="sesion1" class="contenedor">
+            <!-- Título de la sesión 1 -->
+            <h2>Bebidas</h2>
+            <!-- Lista ordenada de elementos -->
+            <ol>
+                <li>Gaseosa. 1L $2.000</li>
+                <li>Agua sin gas. 300 ml $1.000</li>
+                <li>Agua con gas. 300 ml $1.500</li>
+                <li>Agua saborizada. 500 ml $2.000</li>
+                <li>Cerveza. 450 ml $5.000</li>
+
+            </ol>
+            <!-- Botón para volver a la sección de inicio -->
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+        <!-- Sección para la sesión 2 -->
+        <section id="sesion2" class="contenedor">
+            <!-- Título de la sesión 2 -->
+            <h2>Sándwich & Hamburguesa</h2>
+            <!-- Lista desordenada de elementos -->
+            <ul>
+                <li>Sándwich de campo. $7.500</li>
+                <li>Sándwich de simple. $5.000</li>
+                <li>Sándwich completo. $12.000</li>
+                <li>Sándwich de pollo. $9.000</li>
+                <li>Hamburguesa con queso. $16.000</li>
+                <li>Hamburguesa con Completa. $22.000</li>
+                <li>Hamburguesa con Simple. $18.000</li>
+            <!-- Botón para volver a la sección de inicio -->
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+        <!-- Sección para la sesión 3 -->
+        <section id="sesion3" class="contenedor">
+            <!-- Título de la sesión 3 -->
+            <h2>Horarios de atencion al cliente </h2>
+            <!-- Tabla para mostrar datos -->
+            <table>
+                <thead>
+                    <tr>
+                        <!-- Encabezados de la tabla -->
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Sabado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- Fila de datos en la tabla -->
+                        <td>08:00am - 12:00am</td>
+                        <td>10:00am - 12:00am</td>
+                        <td>01:00pm </td>
+                    </tr>
+                    <tr>
+                        <!-- Otra fila de datos en la tabla -->
+                        <td>04:00pm - 08:00pm</td>
+                        <td>05:00pm - 12:00pm</td>
+                        <td>12:00pm</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Botón para volver a la sección de inicio -->
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+        <!-- Sección para la sesión 4 -->
+        <section id="sesion4" class="contenedor">
+            <!-- Título de la sesión 4 -->
+            <h2>Reseña de Servicio</h2>
+            <!-- Formulario para capturar datos del usuario -->
+            <form>
+                <!-- Etiqueta y campo de entrada para el nombre -->
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" name="nombre" type="text" required>
+                <label for="email">Correo Electrónico:</label>
+                <input id="email" name="email" type="email" required>
+                <fieldset>
+                    <legend>Género:</legend>
+                    <label><input name="genero" type="radio" value="masculino"> Masculino</label>
+                    <label><input name="genero" type="radio" value="femenino"> Femenino</label>
+                </fieldset>
+                <label for="satisfacción">Nivel de satisfacción :</label>
+                <select id="satisfacción" name="satisfacción">
+                    <option value="Bn">Bueno</option>
+                    <option value="Rg">Regular</option>
+                    <option value="Ml">Malo</option>
+                    <option value="Ex">Excelente</option>
+                </select>
+                <button type="submit">Enviar</button>
+            </form>
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Derechos Reservados</p>
+    </footer>
+    <script>
+        function mostrarSeccion(seccionId) {
+            document.querySelectorAll('.contenedor').forEach((seccion) => {
+                seccion.classList.remove('visible');
+            });
+            document.getElementById(seccionId).classList.add('visible');
+        }
+    </script>

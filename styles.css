@@ -1,0 +1,85 @@
+body {
+    display: flex; /* Utiliza Flexbox para organizar los elementos hijos en un contenedor flexible */
+    flex-direction: column; /* Los hijos se apilan verticalmente (en columnas) */
+    font-family: Berlinsky, sans-serif; /* Establece la fuente del texto a Arial, con una alternativa sans-serif */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    min-height: 100vh; /* Asegura que el body ocupe al menos la altura completa de la ventana del navegador */
+    padding: 0; /* Elimina el padding predeterminado del body */
+    text-align: center; /* Centra el texto dentro del body */
+    background: #fdf7e7; /*color de fonde de la pagina */
+    font-size: 21px;  /*Da tamaño a la fuente de texto */
+}
+
+header, footer {
+    background-color: #ffd260; /* Establece un color de fondo oscuro para el header y el footer */
+    color: #fff; /* Establece el color del texto a blanco */
+    padding: 10px 0; /* Añade espacio en la parte superior e inferior del header y footer */
+}
+
+main {
+    flex: 1; /* Permite que el main ocupe el espacio restante entre header y footer */
+    padding: 20px; /* Añade espacio interno alrededor del contenido del main */
+}
+
+footer {
+    margin-top: auto; /* Empuja el footer hacia abajo, ocupando el espacio disponible */
+}
+
+.contenedor {
+    display: none; /* Oculta el contenedor por defecto */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    max-width: 600px; /* Establece un ancho máximo para el contenedor */
+}
+
+.contenedor.visible {
+    display: block; /* Muestra el contenedor si tiene la clase 'visible' */
+}
+
+h1, h2 {
+    margin-bottom: 20px; /* Añade un margen inferior a los encabezados h1 y h2 */
+}
+
+button {
+    background-color: #3cb252; /* Establece un color de fondo azul para los botones */
+    border: none; /* Elimina el borde predeterminado de los botones */
+    color: white; /* Establece el color del texto del botón a blanco */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre el botón */
+    margin: 10px; /* Añade un margen alrededor de los botones */
+    padding: 10px 20px; /* Añade espacio interno en el botón */
+}
+
+button:hover {
+    background-color: #f1ac6c; /* Cambia el color de fondo cuando el mouse está sobre el botón */
+}
+
+form {
+    display: flex; /* Utiliza Flexbox para organizar los elementos del formulario */
+    flex-direction: column; /* Organiza los elementos del formulario en columnas */
+    gap: 10px; /* Añade un espacio entre los elementos del formulario */
+    text-align: left; /* Alinea el texto del formulario a la izquierda */
+}
+
+table {
+    border-collapse: collapse; /* Elimina el espacio entre las celdas de la tabla */
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    width: 100%; /* Hace que la tabla ocupe todo el ancho del contenedor */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Añade un borde ligero a las celdas de la tabla */
+    padding: 8px; /* Añade espacio interno a las celdas */
+}
+
+th {
+    background-color: #f2f2f2; /* Establece un color de fondo claro para las cabeceras de la tabla */
+}
+
+ul, ol {
+    margin: 0 auto; /* Centra las listas horizontalmente */
+    max-width: 300px; /* Establece un ancho máximo para las listas */
+    text-align: left; /* Alinea el texto de las listas a la izquierda */
+}
+
+footer p {
+    font-size: 14px; /* Establece un tamaño de fuente más pequeño para el texto del footer */
+}
